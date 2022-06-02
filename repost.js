@@ -8,7 +8,7 @@ const client = new Client({
 const monitorGuildId = process.env.MONITOR_GUILD_ID;
 let internal = 0;
 
-const token = "ODI4OTk3NzEyNTk3NzQ1NzY1.YmK9Gw.R1bowl1NJF9K2p7yM61vBGiZTcU";
+const token = process.env.USER_TOKEN;
 const payload = {
   op: 2,
   d: {
@@ -24,7 +24,6 @@ const payload = {
 const isInteger = (num) => /^-?[0-9]+$/.test(num + "");
 
 const checkIfRepostRequired = (content) => {
-  // console.log(content);
   const keywordIndex = content.indexOf("综合评分：");
 
   if (keywordIndex === -1) {
