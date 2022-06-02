@@ -76,6 +76,7 @@ client.on("ready", async () => {
         let content = d.content;
 
         if (d.channel_id == monitorGuildId) {
+          console.log(d);
           if (checkIfRepostRequired(content)) {
             channel.send(content);
           }
